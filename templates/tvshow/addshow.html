@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}      
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+<form id="generic_form" action="{% url addshow %}" method="POST">
+    <div class="fieldwrapper">
+            {{ form.name.errors }}
+            <label for="id_name">{% trans "Name:" %}</label>        
+            {{ form.name }}
+    </div>
+    <div class="fieldwrapper">
+            {{ form.language.errors }}
+            <label for="id_language">{% trans "Language:" %}</label>        
+            {{ form.language }}
+    </div>    
+    <div class="fieldwrapper">
+            {{ form.plot.errors }}
+            <label for="id_plot">{% trans "Plot (optional):" %}</label>        
+            {{ form.plot }}    
+    </div>
+    <input style="margin:10px 0" type="submit" value="Next" />
+</form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}      
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+<form id="generic_form" action="{% url contact %}" method="POST">
+    <h3>{% trans "Leave me a message!" %}</h3>
+    <br />
+    <div class="fieldwrapper">
+            {{ form.sender.errors }}
+            <label for="id_sender">{% trans "From:" %}</label>        
+            {{ form.sender }}
+    </div>
+    <div class="fieldwrapper">
+            {{ form.subject.errors }}
+            <label for="id_subject">{% trans "Subject:" %}</label>        
+            {{ form.subject }}
+    </div>    
+    <div class="fieldwrapper">
+            {{ form.cc_myself.errors }}
+            <label for="id_cc_myself">{% trans "Send me a copy:" %}</label>        
+            {{ form.cc_myself }}
+    </div>   
+    <div class="fieldwrapper">
+            {{ form.message.errors }}
+            <label for="id_message">{% trans "Message:" %}</label>        
+            {{ form.message }}    
+    </div>
+    <input style="margin:10px 0" type="submit" value="{% trans "Send" %}" />
+</form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

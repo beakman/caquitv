@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}<title>{% trans "Edit Profile" %}</title>{% endblock %}
+
+{% block button %}{% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="profile_detail">
+        <div id="img_profile">
+            <img src="http://beakman.webfactional.com/media/{{profile.avatar}}">
+        </div>
+        <div id="info_profile">
+            <form id="generic_form" method="POST" enctype="multipart/form-data" action="">  
+                <div style="font-size:10px;" class="fieldwrapper">
+                    {{ form.url.errors }}
+                    <label for="id_url">{% trans "Homepage:" %}</label>        
+                    {{ form.url }}
+                </div>
+                <div class="fieldwrapper">
+                    {{ form.email.errors }}
+                    <label for="id_email">{% trans "Email:" %}</label>        
+                    {{ form.email }}
+                </div>
+                <div class="filefieldwrapper">
+                    {{ form.avatar.errors }}
+                    <label for="id_avatar">{% trans "Your picture:" %}</label>        
+                    {{ form.avatar }}
+                </div>                
+                <input style="margin:12px 0;" type="submit" name="submit" value="Update" id="submit">
+            </form>
+            <a href="">{% trans "Delete my account" %}</a> | <a href="{% url auth_password_change %}">{% trans "Change password" %}</a>
+        </div>                
+        <div style="clear:both;"> </div>
+    </div>
+</div>
+{% endblock %}

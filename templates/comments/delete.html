@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block message %}
+<div id="message">
+<h3>{% trans "Really remove this comment?" %}</h3>
+  <blockquote>{{ comment|linebreaks }}</blockquote>
+  <form action="." method="post">
+    {% if next %}<input type="hidden" name="next" value="{{ next }}" id="next" />{% endif %}
+    <p class="submit">
+    <input type="submit" name="submit" value="{% trans "Remove" %}" /> or <a href="{{ comment.get_absolute_url }}">cancel</a>
+    </p>
+  </form>
+</div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block button %}{% endblock %}

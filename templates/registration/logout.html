@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block message %}
+<div id="message">
+    <p>{% trans "Logged out" %}</p>
+    <img src="http://beakman.webfactional.com/media/img/icons/information.png" />
+</div>
+{% endblock %}
+
+{% block content %}{% endblock %}
+{% block button %}{% endblock %}
+
+{% block script %}
+<script type="text/JavaScript">
+<!--
+setTimeout("location.href = 'http://beakman.webfactional.com';",2000);
+-->
+</script>
+{% endblock %}

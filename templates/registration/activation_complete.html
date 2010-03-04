@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block search %}{% endblock %}
+{% block content %}{% endblock %}
+
+{% block message %}
+<div id="message">
+    <p>Your acount have been activated, now you can <a href="{% url auth_login %}">Log-in</a>.</p>
+    <img src="http://beakman.webfactional.com/media/img/icons/information.png" />
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

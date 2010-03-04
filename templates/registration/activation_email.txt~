@@ -1,0 +1,13 @@
+{% load i18n %}
+{% trans "Wellcome to" %} Caqui-TV!
+
+{% trans "Your account has been successfully created. You need to acetivate it by clicking the following URL:" %}
+
+http://{{ site.domain }}{% url registration_activate activation_key %}
+http://127.0.0.1:8000{% url registration_activate activation_key %}
+
+{% blocktrans %}Link is valid for {{ expiration_days }} days.{% endblocktrans %}
+
+--
+Caqui.tv Development Team
+http://caqui.tv

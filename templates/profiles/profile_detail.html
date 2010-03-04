@@ -1,0 +1,33 @@
+{% extends "profiles/base_profile.html" %}
+{% load i18n %}
+{% load humanize %}
+
+{% block title %}<title>{% trans "Profile for" %} {{ profile.user }}</title>{% endblock %}
+
+{% block button %}{% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="profile_detail">
+        <div id="img_profile">
+            <img src="http://beakman.webfactional.com/media/{{profile.avatar}}">
+        </div>
+        <div id="info_profile">
+            <h3 style="text-align:left;">{{ profile.user }}
+            {% ifequal user profile.user %}
+            <a class="edit" href="{% url profiles_edit_profile %}">{% trans "Edit »" %}</a>
+            {% endifequal %}
+            </h3>
+            {% if profile.user.is_staff %}
+            <p style="font-size: 10px; margin: -1em 0 8px 0;"><img src="http://beakman.webfactional.com/media/img/icons/staff.png" /> staff</p>
+            {% endif %}
+            <p>{{ profile.episodes_submited|apnumber|capfirst }} {% trans "episode" %}{{profile.episodes_submited|pluralize}} {% trans "sent since" %} {{ profile.user.date_joined|naturalday }}
+            </p>
+            <a target="_blank" href="{{ profile.url }}">{{ profile.url }}</a>
+        </div>                
+        <div style="clear:both;"> </div> 
+    </div>
+</div>
+{% endblock %}

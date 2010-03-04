@@ -1,0 +1,12 @@
+{% load i18n %}
+Wellcome to Caqui-TV!
+
+Your account has been successfully created. You need to activate it by clicking the following URL:
+
+http://{{ site.domain }}{% url registration_activate activation_key %}
+
+Link is valid for {{ expiration_days }} days.
+
+--
+Caqui.tv Development Team
+http://caqui.tv

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+<form id="generic_form" action="{% url addepisode slug %}" method="POST">
+    <div class="fieldwrapper">
+            {{ form.season.errors }}
+            <label for="id_season">{% trans "Season:" %}</label>        
+            {{ form.season }}
+            <a style="text-decoration:none; border:0;" href="{% url addseason slug %}">
+                <img align="center" src="http://beakman.webfactional.com/media/img/icons/add.png" alt="+" />
+            </a>
+    </div>
+    <div class="fieldwrapper">
+            {{ form.no.errors }}
+            <label for="id_no">{% trans "No:" %}</label>        
+            {{ form.no }}    
+    </div>
+    <div class="fieldwrapper">
+            {{ form.title.errors }}
+            <label for="id_title">{% trans "Title:" %}</label>        
+            {{ form.title }}    
+    </div>
+    <div class="fieldwrapper">
+            {{ form.password.errors }}
+            <label for="id_password">{% trans "Password:" %}</label>        
+            {{ form.password }}    
+    </div>
+    <div class="fieldwrapper">
+            {{ form.quality.errors }}
+            <label for="id_quality">{% trans "Quality:" %}</label>        
+            {{ form.quality }}    
+    </div>
+    <div class="fieldwrapper">
+            {{ form.url.errors }}
+            <label for="id_url">{% trans "Links:" %}</label>        
+            {{ form.url }}    
+    </div>
+
+<input style="margin:10px 0" type="submit" value="Submit" />
+</form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

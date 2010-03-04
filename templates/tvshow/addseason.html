@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+<form id="generic_form" action="{% url addseason slug %}" method="POST">
+    <div class="fieldwrapper">
+            {{ form.no.errors }}
+            <label for="id_no">{% trans "No:" %}</label>        
+            {{ form.no }}
+    </div>
+<input style="margin:10px 0" type="submit" value="Next" />
+</form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

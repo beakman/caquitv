@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load humanize %}
+{% load comments %}
+
+{% block search %}{% endblock %}
+
+{% block button %}
+{% if user.is_authenticated %}
+<!--<div class="button_wrap">-->
+<!--    <a class="button" href="{% url addepisode episode.show.slug %}">{% trans "Submit an episode" %}</a>-->
+<!--</div>-->
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2><a style="display:inline;" href={% url show_detail episode.show.slug %}> {{ episode.show }}</a> <a href="{{ episode.get_absolute_url }}">{{episode}}</a></h2>
+    
+    {% ifequal episode.rating.score 0 %}
+    <div class="links_green">
+    {% endifequal %}
+    {% ifequal episode.rating.score 1 %}
+    <div class="links_yellow">
+    {% endifequal %}
+    {% ifequal episode.rating.score 2 %}
+    <div class="links_yellow">
+    {% endifequal %}
+    {% ifequal episode.rating.score 3 %}
+    <div class="links_orange">
+    {% endifequal %}
+    {% ifequal episode.rating.score 4 %}
+    <div class="links_red">
+    {% endifequal %}
+    {% ifequal episode.rating.score 5 %}
+    <div class="links_red">
+    {% endifequal %}
+        <p>{% trans "Quality" %}: {{episode.get_quality_display}}</p>
+        {% if episode.password %}
+        <p>{% trans "Password" %}: {{episode.password}}</p>
+        {% endif %}
+        <br />                       
+        {{episode.url|urlize|linebreaksbr}}
+    </div>
+    <div class="submit_broken">
+        {% if user.is_authenticated %}
+        <a href="{% url broken_link episode.show.slug, episode.season.no, episode.slug %}">
+        {% trans "Broken link" %}
+        </a>                    
+        {% endif %}
+    </div>
+    <br />
+    <hr />
+
+<div class="comments">
+{% get_comment_count for episode as comment_count %}
+    {% if comment_count %}
+        <h3>{{comment_count}} {% trans "comments" %}</h3>
+    {% else %}
+        <h3>{% trans "No comments yet" %}</h3>
+    {% endif %}    
+    {% get_comment_list for episode as comment_list %}
+    {% for comment in comment_list %}
+    <div style="margin:15px 0;">    
+        <p class="subtext">
+        <img src="http://beakman.webfactional.com/media/img/icons/comment.png" />
+        <a href="{{comment.url}}" style="font-size:15px; color:#0187C5;">{{comment.user_name}}</a> 
+            {{comment.submit_date|date|capfirst}} 
+            <b>#{{ forloop.counter }}</b>
+        </p>
+        <div class="comment">
+        <p>{{comment.comment}}</p>
+        {% if perms.comment.can_delete %}
+            <a class="delete_comment" href="/comments/delete/{{comment.id}}">Delete</a>
+        {% endif %}
+        </div> 
+    </div>
+    {% endfor %}
+</div>
+
+<div class="comment-form">
+    <h3>{% trans "Say something" %}</h3>
+    {% render_comment_form for episode %}
+</div>    
+{% endblock %}
+

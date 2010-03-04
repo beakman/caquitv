@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <form id="loginform" method="post" action=".">
+        <div class="fieldwrapper">
+                {{ form.username.errors }}
+                <label for="id_username">{% trans "Name:" %}</label>        
+                {{ form.username }}
+        </div>
+        <div class="fieldwrapper">
+                {{ form.password.errors }}
+                <label for="id_password">{% trans "Password:" %}</label>        
+                {{ form.password }}
+        </div>
+      <input style="margin: 10px 0;" type="submit" value="{% trans 'Log in' %}" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    <p style="margin: 10px 0 0 0;">
+    {% trans "Forgot password" %}? <b><a href="{% url auth_password_reset %}">{% trans "Reset it" %}</a>!</b></p>
+    <p>{% trans "Not member" %}? <b><a href="{% url registration_register %}">{% trans "Register" %}</a>!</b></p>
+    </form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block feed %}
+<link rel="alternate" 
+            type="application/rss+xml" 
+            title="RSS 2.0" 
+            href="/caquitv/feeds/show/{{object.slug}}" />
+{% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <h2>
+    <a href="/feeds/show/{{object.slug}}">{{ object.name }}</a> 
+    <img src="http://beakman.webfactional.com/media/img/icons/rss-small.png" />
+    </h2>
+    <div class="show_info">
+        <div class="div_left">
+            <p style="margin:10px 0;">{{ object.get_language_display }} 
+            <img src="http://beakman.webfactional.com/media/img/flags/{{object.get_language_display}}.png">
+            </p>
+            <p>{{ object.plot }}</p>
+            <p style="text-align:right; font-weight:bold;">
+                <a href="{% url edit_show object.slug %}">{% trans "Edit »" %}</a>
+            </p>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    
+    {% if object.seasons %}
+        {% for season in object.seasons.all %}
+        {% if season.episodes.all %}<b>{% trans "Season" %} {{ season.no }}</b>{% endif %}
+            {% for episode in season.episodes.all %}
+            <ul>
+                <li style="margin:18px 0;">
+                    <a href="{% url episode_detail episode.show.slug, episode.season.no, episode.slug %}">{{ episode }}</a>
+                    <p class="subtext">{% trans "Submited by" %} 
+                    <a class="subtext" href="{% url profiles_profile_detail episode.author.username %}">
+                        {{episode.author.username}}
+                    </a>
+                    </p>
+<!-- Cambia el color de fondo en funcion de si estan rotos los links-->
+                    {% ifequal episode.rating.score 0 %}
+                    <div class="links_green">
+                    {% endifequal %}
+                    {% ifequal episode.rating.score 1 %}
+                    <div class="links_yellow">
+                    {% endifequal %}
+                    {% ifequal episode.rating.score 2 %}
+                    <div class="links_yellow">
+                    {% endifequal %}
+                    {% ifequal episode.rating.score 3 %}
+                    <div class="links_orange">
+                    {% endifequal %}
+                    {% ifequal episode.rating.score 4 %}
+                    <div class="links_red">
+                    {% endifequal %}
+                    {% ifequal episode.rating.score 5 %}
+                    <div class="links_red">
+                    {% endifequal %}
+                        <p>{% trans "Quality" %}: {{episode.get_quality_display}}</p>
+                        {% if episode.password %}
+                        <p>{% trans "Password" %}: {{episode.password}}</p>
+                        {% endif %}
+                        <br />                       
+                        {{episode.url|urlize|linebreaksbr}}
+                    </div>
+                    <div class="submit_broken">
+                        {% if user.is_authenticated %}
+                        <a href="{% url broken_link episode.show.slug, episode.season.no, episode.slug %}">
+                        {% trans "Broken link" %}
+                        </a>                    
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block button %}
+{% if user.is_authenticated %}
+<div class="button_wrap">
+    <a class="button" href="{% url addepisode object.slug %}">{% trans "Submit an episode" %}</a>
+</div>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends "profiles/base_profile.html" %}
+{% load i18n %}
+
+{% block content %}
+<div id="content">
+    <div id="profile_detail">
+        <ul class="link_list">
+            {% for profile in object_list %}
+            <li><a href="{{ profile.get_absolute_url }}">{{ profile.user }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

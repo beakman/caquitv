@@ -1,0 +1,13 @@
+{% load humanize %}
+{{ obj.body }}
+Quality: {{obj.get_quality_display}}
+<br />
+Password: {{obj.password}}
+<br />
+{{ obj.url|urlize|linebreaksbr }}
+
+    
+
+
+
+

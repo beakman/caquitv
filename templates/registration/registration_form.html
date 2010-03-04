@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content" style="width:300px;">
+<form id="generic_form" method="post" action=".">
+    <div class="fieldwrapper">
+                {{ form.username.errors }}
+                <label for="id_name">Username:</label>        
+                {{ form.username }}
+    </div>
+    <div class="fieldwrapper">
+                {{ form.email.errors }}
+                <label for="id_name">Email address:</label>        
+                {{ form.email }}
+    </div>
+    <div class="fieldwrapper">
+                {{ form.password1.errors }}
+                <label for="id_name">Password:</label>        
+                {{ form.password1 }}
+    </div>    
+    <div class="fieldwrapper">
+                {{ form.password2.errors }}
+                <label for="id_name">Password (again):</label>        
+                {{ form.password2 }}
+    </div>    
+  <input type="submit" value="{% trans 'Submit' %}" />
+</form>
+</div>
+{% endblock %}
+
+{% block button %}{% endblock %}

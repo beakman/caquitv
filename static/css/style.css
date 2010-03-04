@@ -1,0 +1,733 @@
+/*            */
+/* Estructura */
+/*            */
+
+body {
+margin:0;
+padding:0;
+width:100%;
+}
+
+body > #wrap {
+height:auto;
+min-height:100%;
+}
+
+html,body,#wrap {
+height:100%;
+}
+
+#top {
+padding:10px 0 0 5px;
+position:absolute;
+width:100%;
+top:2px;
+}
+
+* a img{border:none;}
+
+* a:hover {text-decoration:underline;}
+
+* html .clearfix {
+height:1%;
+}
+
+*,html {
+margin:0;
+padding:0;
+}
+
+#container {
+margin:0;
+padding-top:40px;
+width:100%;
+}
+
+#content {
+height:auto;
+margin:35px auto;
+width:700px;
+}
+
+#content ul {
+list-style:none;
+}
+
+#left2columns {
+margin:5px;
+padding:5px;
+width:400px;
+float:left;
+}
+
+#right2columns {
+margin:5px;
+padding:5px;
+width:200px;
+float:right;
+}
+
+#right2columns h3 {
+padding-bottom:5px;
+text-align:right;
+}
+
+#right2columns img {
+margin-right:10px;
+float:left;
+border:1px solid #dadada;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:2px;
+}
+
+
+#left2columns a {
+display:inline;
+text-overflow:ellipsis;
+white-space:nowrap;
+}
+
+#left2columns h3 {
+padding-bottom:5px;
+text-align:left;
+}
+
+.clear{
+clear:both;
+height:1px;
+margin:3px 0 3px 0;
+}
+
+#foot {
+padding-top:35px;
+}
+
+#foot p a{padding:0 10px 0 10px;}
+
+#footer {
+clear:both;
+height:80px;
+margin-top:-80px;
+padding:auto;
+position:relative;
+text-align:center;
+width:100%;
+}
+
+#header {
+margin: 0 auto 0 auto;
+padding:21px 0;
+text-align:center;
+width:330px;
+}
+
+#header a{margin:0; padding:0;}
+
+#search{
+text-align:center;
+margin: 10px 0 10px 0;
+}
+
+#home_search {
+margin:auto 0;
+}
+
+#home_search label {
+display:block;
+margin:0 0 6px 2px;
+}
+
+#home_search_q {
+margin:0;
+padding:8px 10px;
+width:230px;
+}
+
+#home_search_submit {
+margin-left:-0.5em;
+outline:0 none medium;
+padding:8px 15px;
+}
+
+#main {
+padding-bottom:80px;
+}
+
+#menu {
+padding:32px 0;
+text-align:center;
+}
+
+.clearfix {
+display:block;
+}
+
+.clearfix:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+}
+
+/* Buttons */
+.button_wrap {
+margin: 30px auto;
+width:180px;
+}
+
+.button {
+display: block;
+padding: 8px 10px;
+text-align:center;
+}
+
+.button:active {
+}
+
+.button:hover,.button:focus {
+}
+
+/*                  */
+/* Colores y fondos */
+/*                  */
+
+body {
+background: url(http://beakman.webfactional.com/media/img/background-pattern.png) repeat-x scroll 0 0;
+}
+
+/* logo sin borde */
+#header a img{border:none;}
+
+#footer{
+background:transparent url(http://beakman.webfactional.com/media/img/footer.jpg) repeat-x scroll 0 0;
+}
+
+/*cuadro de texto buscador*/
+#home_search_q {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px 0 0 5px;
+border-radius: 5px 0 0 5px;
+-ms-border-radius: 5px 0 0 5px;
+-moz-border-radius: 5px 0 0 5px;
+-webkit-border-radius: 5px 0 0 5px;
+-khtml-border-radius: 5px 0 0 5px;
+-x-system-font:none;
+background:#dadada none repeat scroll 0 0;
+border-color:#FFFFFF;
+border-style:solid;
+border-width:1px 0 1px 1px;
+font-family:Helvetica,Arial,Sans-serif;
+font-size:18px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin:0;
+outline-width:0;
+padding:8px 10px;
+width:230px;
+}
+#home_search_q:focus {
+border-color:#FFFFFF;
+outline-width:0;
+}
+
+/*boton buscar*/
+#home_search_submit {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:0 5px 5px 0;
+border-radius: 0 5px 5px 0;
+-ms-border-radius: 0 5px 5px 0;
+-moz-border-radius: 0 5px 5px 0;
+-webkit-border-radius: 0 5px 5px 0;
+-khtml-border-radius: 0 5px 5px 0;
+-x-system-font:none;
+background:#BBBBBB url(http://beakman.webfactional.com/media/img/grad-search-button.png) repeat-x scroll 0 0;
+border:0px solid #EEEEEE;
+color:#333333;
+font-family:Helvetica,Arial,Sans-serif;
+font-size:18px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+margin-left:-0.5em;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+padding:8px 15px;
+text-decoration:none;
+}
+
+#home_search_submit::-moz-focus-inner {
+border:0 none;
+padding:0;
+}
+
+#home_search_submit:hover, #home_search_submit:focus {
+background-position:0 -5px;
+color:#111111;
+cursor:pointer;
+}
+#home_search_submit:active {
+background-image:none;
+}
+
+/* boton verde */
+.button{
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+-x-system-font:none;
+background:#BBBBBB url(http://beakman.webfactional.com/media/img/grad-submit-button.png) repeat-x scroll 0 0;
+background-position:0 -9px;
+color:#FFF;
+font-family:Helvetica,Arial,Sans-serif;
+font-size:18px;
+outline-color:-moz-use-text-color;
+outline-style:none;
+outline-width:medium;
+padding:15px 15px;
+text-decoration:none;
+}
+.button::-moz-focus-inner {
+border:0 none;
+padding:0;
+}
+.button:hover, .button:focus {
+background-position:0 0px;
+color:#FFF;
+cursor:pointer;
+text-decoration:none;
+}
+.button:active {
+background-image:none;
+background-color:#44950a;
+}
+
+/*        */
+/* Textos */
+/*        */
+#content .subtext{font-size:12px; color:#BBBBBB;}
+
+body{font-family:Helvetica,Arial,Sans-serif;}
+
+a{color:#333; text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+#top{font-size:12px; font-weight:bold;}
+#top a{margin:0 4px 0 4px;}
+#top a:hover{text-decoration:underline;}
+
+#content {
+font-size:15px;
+}
+
+#content p {
+color:#333;
+font-size:13px;
+}
+
+/* informacion sobre la serie */
+.show_info {
+margin:10px 0 32px 0;
+padding:4px 20px;
+background: #f3f3f3;
+}
+
+#footer {
+font-size:13px;
+text-align:center;
+}
+#foot a,#top a {color:#333; text-decoration:none;}
+#foot p {color:#666;}
+
+#header {text-align:center;}
+
+/*label del formulario buscador*/
+#home_search label {
+color:#4d4d4d;
+display:block;
+margin:0 0 6px 2px;
+font-size:12px;
+}
+
+#content h3 {
+font-size:15px;
+color:#000;
+}
+
+/* mensaje informativo */
+#message {
+background-color:#ffff96;
+color:#333;
+font-size:15px;
+margin:auto;
+-moz-border-radius:15px;
+border-radius: 15px;
+-ms-border-radius: 15px;
+-webkit-border-radius: 15px;
+-khtml-border-radius: 15px;
+padding:18px;
+text-align:center;
+width:400px;
+}
+
+/* Formularios */
+
+/* generic form*/
+#generic_form{
+margin:0 auto;
+width:260px;
+}
+#generic_form label {
+color:#4d4d4d;
+display:block;
+font-size:12px;
+}
+
+/* generic form field*/
+.fieldwrapper input, .fieldwrapper textarea {
+background:#fff none repeat scroll 0 0;
+border:1px solid #dadada;
+font-size:18px;
+margin:4px 0;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:2px 10px;
+width:230px;
+x-system-font:none;
+}
+.fieldwrapper input{font-size:18px;}
+.fieldwrapper textarea {font-size:14px; width: 350px;}
+.fieldwrapper a img,#header a img {border:none;}
+.fieldwrapper textarea:focus,.fieldwrapper input:focus{
+background-color:#eee;
+outline-width:0;
+}
+
+.fieldwrapper .errorlist {
+color: #DD2222;
+font-size: 11px;
+margin-top: 10px;
+}
+
+/* login */
+#loginform{
+margin:0 auto;
+width:260px;
+}
+#loginform label {
+color:#4d4d4d;
+display:block;
+font-size:12px;
+}
+
+
+/* Tablas */
+#hor-zebra {
+border-collapse:collapse;
+font-family:"lucida sans unicode", "lucida grande", sans-serif;
+font-size:12px;
+margin:25px;
+text-align:left;
+width:650px;
+}
+#hor-zebra .odd {background:#e8edff;}
+#hor-zebra td {color:#669; padding:8px;}
+#hor-zebra th {
+color:#039;
+font-size:14px;
+font-weight:400;
+padding:10px 8px;
+}
+
+/* Link status */
+
+/* boton link roto */
+.submit_broken {font-size:14px;padding:5px 0 5px 5px; border-bottom:1px dotted #DDD;}
+.submit_broken a:hover{text-decoration:underline;}
+.submit_broken a {
+background:transparent url(http://beakman.webfactional.com/media/img/icons/report.png) center left no-repeat;
+display:inline-block;
+padding:5px 0 0 30px;
+text-decoration:none;
+}
+
+.rss_title {
+color: #000;
+background:transparent url(http://beakman.webfactional.com/media/img/icons/rss-small.png) center left no-repeat;
+display:inline-block;
+padding:5px 0 0 30px;
+text-decoration:none;
+}
+
+/* fondo de los enlaces */
+.links_green {
+background:url(http://beakman.webfactional.com/media/img/green-grad.png) repeat-x scroll 0 0;
+color:#333;
+margin-top:10px;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:15px 25px;
+}
+
+.links_orange {
+background:url(http://beakman.webfactional.com/media/img/orange-grad.png) repeat-x scroll 0 0;
+color:#333;
+margin-top:10px;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:15px 25px;
+}
+
+.links_red {
+background:url(http://beakman.webfactional.com/media/img/red-grad.png) repeat-x scroll 0 0;
+color:#333;
+margin-top:10px;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:15px 25px;
+}
+
+.links_yellow {
+background:url(http://beakman.webfactional.com/media/img/yellow-grad.png) repeat-x scroll 0 0;
+color:#333;
+margin-top:10px;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:15px 25px;
+}
+
+/* Informacion del perfil */
+#profile_detail {
+border:1px solid #dadada;
+height:auto;
+margin:0 auto 35px;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:5px;
+width:460px;
+}
+#profile_form label {
+color:#4d4d4d;
+display:block;
+font-size:12px;
+margin:0 0 0 2px;
+}
+
+#img_profile {
+float:left;
+width:80px;
+}
+
+#info_profile {
+float:right;
+width:330px;
+}
+
+#info_profile a {
+color:#0187c5;
+font-size:12px;
+margin:10px 10px 0 0;
+text-decoration:none;
+}
+
+#info_profile h3 {
+padding-bottom:12px;
+}
+
+#info_profile h3 a {
+font-size:11px;
+text-align:right;
+}
+
+#info_profile p {
+color:#666;
+font-size:13px;
+}
+
+/* Comentarios */
+
+.comments {
+margin:0 auto;
+padding:15px;
+text-align:left;
+}
+
+.comments h3 {
+color: #4D4D4D; 
+text-align:left;
+}
+
+.comment p {
+color:#BBB; 
+font-size:13px; 
+border-bottom: 1px dotted #dadada; 
+padding:5px 0; 
+margin:5px 0;
+}
+
+.comment-form {
+margin:0 auto;
+padding:15px;
+width:100%;
+}
+
+.comment-form h3 {
+color: #4D4D4D; 
+text-align:left; 
+margin-bottom:15px; 
+border-bottom: 1px dashed #DDD
+}
+
+.comment-form .errorlist {
+color: #DD2222;
+clear: both;
+float: right;
+margin: 15px 0 0 0;
+}
+
+.comment-form input {
+background:#fff none repeat scroll 0 0;
+border:1px solid #dadada;
+float:right;
+font-size:18px;
+margin:4px 0;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:2px 10px;
+width:230px;
+x-system-font:none;
+}
+
+.comment-form label {
+clear:both;
+color:#4d4d4d;
+float:left;
+font-family:helvetica, sans;
+font-size:12px;
+margin:0 0 0 2px;
+}
+
+.comment-form textarea {
+background:#fff none repeat scroll 0 0;
+border:1px solid #dadada;
+font-size:14px;
+height:120px;
+margin:4px 0;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+padding:2px 10px;
+width:100%;
+x-system-font:none;
+}
+
+.comment-form textarea:focus,.comment-form input:focus{
+background-color:#eee;
+outline-width:0;
+}
+
+.comment-preview {
+font-size:20px;
+margin:5px 0 32px 0;
+padding:4px 20px;
+background: #f3f3f3;
+border: solid 1px #BFBFBF;
+}
+
+.comment-preview p {font-size:20px;}
+
+.delete_comment {
+font-size:12px;
+font-weight: light;
+color:#4D4D4D;
+background:transparent url(http://beakman.webfactional.com/media/img/icons/mail-mark-notjunk.png) center left no-repeat;
+display:inline-block;
+padding:5px 0 0 20px;
+text-decoration:none;
+}
+
+/* botones enviar y preview */
+.submit input {
+background:#bbb url(http://beakman.webfactional.com/media/img/grad-search-button.png) repeat-x scroll 0 0;
+border:0 solid #eee;
+color:#333;
+font-family:helvetica,arial,sans-serif;
+font-size:15px;
+margin:5px;
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+-moz-border-radius:5px;
+border-radius: 5px;
+-ms-border-radius: 5px;
+-webkit-border-radius: 5px;
+-khtml-border-radius: 5px;
+width:100px;
+x-system-font:none;
+}
+
+.submit input:active {background-image:none;}
+
+.submit input:hover,.submit input:focus {
+background-position:0 -5px;
+color:#111;
+cursor:pointer;
+}
+
+

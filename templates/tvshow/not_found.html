@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block search %}{% endblock %}
+{% block message %}
+    <div id="message">
+    <p>{% trans "No show was found, you may want submit one!" %}</p>
+    <img src="http://beakman.webfactional.com/media/img/icons/alert.png" />
+    </div>
+{% endblock %}
+{% block content %}{% endblock %}

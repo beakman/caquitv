@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{%block title %}<title>{% trans "Create Profile" %}</title>{%endblock%}
+
+{% block button %}{% endblock %}
+
+{% block search %}{% endblock %}
+
+{% block content %}
+<div id="content">
+    <div id="profile_detail">
+        <div id="img_profile">
+            <img src="http://beakman.webfactional.com/media/{{profile.avatar}}">
+        </div>
+        <div id="info_profile">
+            <form action="." method= "POST" enctype="multipart/form-data">
+            <table>
+            {{ form.as_table }}
+            </table><br/>
+            <input type="submit" value="Create" />
+            </form>
+        </div>                
+        <div style="clear:both;"> </div>
+    </div>
+</div>
+{% endblock %}

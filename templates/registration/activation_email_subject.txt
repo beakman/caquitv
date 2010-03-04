@@ -1,0 +1,2 @@
+{% load i18n %}
+[Caqui.tv] Please activate you new account

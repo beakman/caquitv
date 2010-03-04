@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load humanize %}
+
+{% block message %}{% endblock %}
+{% block button %}{% endblock %}
+
+
+{% block search %}
+{% if results %}
+{% else %}    
+    <div id="search">       
+        <form id="home_search" class="search" method="get" action="{% url search %}.">
+            <div style="margin: 0pt; padding: 0pt;">
+                <input type="hidden" value="" name="q"/>
+            </div>
+            <div>
+                <input id="home_search_q" type="text" tabindex="1" accesskey="/" name="q" size="40"/>
+                <a id="home_search_submit" class="submit" tabindex="2" href="javascript: submitform()">{% trans "Search" %}</a>
+            </div>
+        </form>
+        <script type="text/javascript">
+        function submitform()
+        {
+          document.search.submit();
+        }
+        </script>     
+    </div>
+{% endif %}
+{% endblock %}
+
+{% block content %}                                
+<div id="content">
+    <div style="margin:0 auto;">
+     {% if query %}
+        <h3 style="text-align:center;">{% trans "Search results for" %} "{{ query|escape }}" ({{ matches }} {% trans "matches" %}):</h3>
+        {% if results %}
+        <table id="hor-zebra">
+            <thead>
+            	<tr>
+                    <th scope="col">{% trans "Show" %}</th>        	
+                	<th scope="col">{% trans "Added" %}</th>
+                    <th scope="col">{% trans "Last season" %}</th>
+                    <th scope="col">{% trans "Language" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for show in shows %}
+            	<tr class="{% cycle 'odd' '' %}">
+                    <td><a href="{% url show_detail show.slug %}">{{ show|escape }}</a></td>        	
+                	<td>{{show.pub_date|naturalday}}</td>
+                    <td>{{show.seasons.all|first}}</td>
+                    <td><img src="http://beakman.webfactional.com/media/img/flags/{{show.get_language_display}}.png"> {{ show.get_language_display }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p style="text-align:center; font-size:15px; margin:12px 0;">{% trans "No shows found" %}</p>
+        {% endif %}
+    {% endif %}
+    </div>           
+</div>
+{% endblock %}
