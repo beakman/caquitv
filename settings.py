@@ -16,7 +16,7 @@ import os.path
 PROJECT_DIR = os.path.dirname(__file__)
 
 ADMINS = (
-    ('Paco Salido', 'psalido@gmail.com'),
+    ('Paco', 'psalido@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -47,8 +47,8 @@ USE_I18N = True
 I18N_URLS = False
 
 #MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-MEDIA_ROOT = '/home/beakman/webapps/media/'
-MEDIA_URL = 'http://beakman.webfactional.com/media/'
+MEDIA_ROOT = '/home/some/path/media/'
+MEDIA_URL = 'http://change.it/media/'
 
 LOGIN_REDIRECT_URL = '/'
 
