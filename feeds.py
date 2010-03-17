@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 
 class LatestEpisodes(Feed):
     title = _("Caqui.tv - Latest episodes")
-    link = "/latest/"
+    link = "/feeds/latest/"
     description = _("Updates on episodes additions.")
     
     def items(self):
