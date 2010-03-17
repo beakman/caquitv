@@ -64,7 +64,7 @@ def edit_show(request, slug):
 def broken_link(request, show, season, episode):
     ep = Episode.objects.get(show__slug=show, season__no=season, slug=episode)
     if not ep.rating.get_rating_for_user(request.user, request.META['REMOTE_ADDR']):    
-        if ep.rating.score==5:
+        if ep.rating.score==5 & ep-rating.get_rating_for_user(user=User.objects.get(username=beakman)):
             ep.delete()
         else:
             ep.rating.add(score=1, user=request.user, ip_address=request.META['REMOTE_ADDR'])
@@ -114,10 +114,9 @@ def addshow(request):
     if request.method == 'POST':
         s = Show(author=request.user)
         form = ShowForm(request.POST, instance=s)        
-        if form.is_valid():
+        if form.is_valid():            
             form.save()		
             return HttpResponseRedirect(reverse('addepisode', args=[slugify(form.cleaned_data["name"])]))        
-
     else:
         form = ShowForm()
         

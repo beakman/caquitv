@@ -4,7 +4,7 @@ from tvshow.models import Show, Season, Episode
 from accounts.models import UserProfile
 
 class ShowAdmin(admin.ModelAdmin):
-    fields = ['name', 'plot', 'slug', 'pub_date', 'author']
+    fields = ['name', 'plot', 'slug', 'author']
     prepopulated_fields = {"slug": ("name",)}
 
 class EpisodeAdmin(admin.ModelAdmin):

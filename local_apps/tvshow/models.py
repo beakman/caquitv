@@ -1,4 +1,3 @@
-from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 import re
@@ -28,7 +27,7 @@ class Show(models.Model):
     name = models.CharField(null=False, blank=False, max_length=255, unique=True)
     plot = models.TextField(null=True, blank=True)
     language =  models.CharField(max_length=1, choices=LANGUAGE_CHOICES)
-    pub_date = models.DateTimeField(default=datetime.today())
+    pub_date = models.DateTimeField(auto_now=True)
     slug = models.SlugField(help_text = 'Autogenerado', unique=True)
     author = models.ForeignKey(User, related_name='shows', null=True, blank=True)
     
@@ -54,7 +53,7 @@ class Show(models.Model):
      
 class Season(models.Model):    
     show = models.ForeignKey(Show, to_field='name', related_name='seasons')
-    pub_date = models.DateTimeField(default=datetime.today())
+    pub_date = models.DateTimeField(auto_now=True)
     no = models.IntegerField()
     author = models.ForeignKey(User, related_name='seasons', null=True, blank=True)
     
@@ -86,9 +85,9 @@ class Episode(models.Model):
     title = models.CharField(max_length=255)
     url = models.TextField()
     password = models.CharField(max_length=255, blank=True, null=True)
-    pub_date = models.DateTimeField(default=datetime.today())
+    pub_date = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, related_name='episodes')
-    rating = RatingField(range=5)
+    rating = RatingField(range=5, allow_anonymous = True)
     slug = models.SlugField(help_text = 'Autogenerado', unique=True)
     prepopulated_fields = {"slug": ("title",)}
        
@@ -101,7 +100,7 @@ class Episode(models.Model):
         formated_name = "S%sE%s - %s [%s]" % (season_no, episode_no, self.title, self.get_quality_display())
         return formated_name
     
-    def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):            
         if not self.slug:
             self.slug = slugify(self.title) 
         

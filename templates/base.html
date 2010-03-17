@@ -12,7 +12,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 
 <head>
-    <meta http-equiv="Content-Type" content= "text/html; charset=utf-8" />        
+    <meta http-equiv="Content-Type" content= "text/html; charset=utf-8" />
+    <meta name="y_key" content="12691784e1588569">      
     <link href="http://beakman.webfactional.com/media/css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" 
       type="image/png" 
@@ -23,6 +24,8 @@
     {% block title %}
         <title>Caqui-TV! {% if query %} - {% trans "Search Results" %} {% endif %}</title>
     {% endblock %}
+    <meta name="description" content="Caqui-TV it's a TV Show syndication system." />
+    <meta name="keywords" content="tv,show,megaupload,rapidshare,download,series,descarga,directa,rss,syndication" />
 </head>
 
 <body>
@@ -71,6 +74,7 @@
                 <div id="header">                     
                     <a href="{% url index %}">
                     <img alt="Caqui.tv" src="http://beakman.webfactional.com/media/img/logo.png"/>
+                    <p id="betatag" class="sma">BETA</p>
                     </a>
                 </div>
                 {% endblock %}
@@ -168,7 +172,7 @@
                     <div style="display:inline; margin-bottom: 2px;">
                         <a href="{% url show_detail episode.show.slug %}">{{ episode.show }}</a> <a class="ellipsis" href="{% url episode_detail episode.show.slug, episode.season.no, episode.slug %}">{{ episode }}</a>
                         <p style="color:#b0b0b0;" class="subtext">
-                        {% blocktrans with episode.pub_date|naturalday as day %}Submited {{day}} {% endblocktrans %}
+                        {% blocktrans with episode.pub_date|timesince as day %}Submited {{day}} {% endblocktrans %}
                         </p>
                     </div>
                 {% endfor %}

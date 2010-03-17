@@ -129,6 +129,7 @@ width:330px;
 
 #search{
 text-align:center;
+padding: 17px 0;
 margin: 10px 0 10px 0;
 }
 
@@ -202,6 +203,16 @@ background: url(http://beakman.webfactional.com/media/img/background-pattern.png
 
 /* logo sin borde */
 #header a img{border:none;}
+
+#betatag {
+margin: -1.1em auto 0 auto;
+font-weight: bold;
+text-align: right; 
+color:#4d4d4d;
+}
+
+.big {width: 530px; font-size:13px;}
+.sma {width: 320px; font-size:11px;}
 
 #footer{
 background:transparent url(http://beakman.webfactional.com/media/img/footer.jpg) repeat-x scroll 0 0;

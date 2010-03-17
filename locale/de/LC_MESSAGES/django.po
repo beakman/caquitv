@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-08 17:15+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: feeds.py:8
+msgid "Caqui.tv - Latest episodes"
+msgstr ""
+
+#: feeds.py:10
+msgid "Updates on episodes additions."
+msgstr ""
+
+#: settings.py:40
+msgid "English"
+msgstr ""
+
+#: settings.py:41
+msgid "Spanish"
+msgstr ""
+
+#: external_apps/chronograph/admin.py:30
+#, python-format
+msgid "The job \"%(job)s\" was run successfully."
+msgstr ""
+
+#: external_apps/chronograph/admin.py:47
+msgid "Name"
+msgstr ""
+
+#: external_apps/chronograph/models.py:21
+msgid "Yearly"
+msgstr ""
+
+#: external_apps/chronograph/models.py:22
+msgid "Monthly"
+msgstr ""
+
+#: external_apps/chronograph/models.py:23
+msgid "Weekly"
+msgstr ""
+
+#: external_apps/chronograph/models.py:24
+msgid "Daily"
+msgstr ""
+
+#: external_apps/chronograph/models.py:25
+msgid "Hourly"
+msgstr ""
+
+#: external_apps/chronograph/models.py:26
+msgid "Minutely"
+msgstr ""
+
+#: external_apps/chronograph/models.py:27
+msgid "Secondly"
+msgstr ""
+
+#: external_apps/chronograph/models.py:33
+msgid "name"
+msgstr ""
+
+#: external_apps/chronograph/models.py:34
+msgid "frequency"
+msgstr ""
+
+#: external_apps/chronograph/models.py:35
+msgid "params"
+msgstr ""
+
+#: external_apps/chronograph/models.py:36
+msgid ""
+"Comma-separated list of <a href=\"http://labix.org/python-dateutil\" target="
+"\"_blank\">rrule parameters</a>. e.g: interval:15"
+msgstr ""
+
+#: external_apps/chronograph/models.py:37
+msgid "command"
+msgstr ""
+
+#: external_apps/chronograph/models.py:38
+msgid "A valid django-admin command to run."
+msgstr ""
+
+#: external_apps/chronograph/models.py:39
+msgid "args"
+msgstr ""
+
+#: external_apps/chronograph/models.py:40
+msgid "Space separated list; e.g: arg1 option1=True"
+msgstr ""
+
+#: external_apps/chronograph/models.py:41
+msgid "If checked this job will never run."
+msgstr ""
+
+#: external_apps/chronograph/models.py:42
+msgid "next run"
+msgstr ""
+
+#: external_apps/chronograph/models.py:42
+msgid "If you don't set this it will be determined automatically"
+msgstr ""
+
+#: external_apps/chronograph/models.py:43
+msgid "last run"
+msgstr ""
+
+#: external_apps/chronograph/models.py:53
+#, python-format
+msgid "%(name)s - disabled"
+msgstr ""
+
+#: external_apps/chronograph/models.py:73
+msgid "never (disabled)"
+msgstr ""
+
+#: external_apps/chronograph/models.py:78
+msgid "due"
+msgstr ""
+
+#: external_apps/chronograph/models.py:81
+msgid "second"
+msgid_plural "seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: external_apps/chronograph/models.py:82
+#, python-format
+msgid "%(number)d %(type)s"
+msgstr ""
+
+#: external_apps/chronograph/models.py:85
+msgid "time until next run"
+msgstr ""
+
+#: external_apps/chronograph/templates/admin/chronograph/job/change_form.html:6
+msgid "History"
+msgstr ""
+
+#: external_apps/chronograph/templates/admin/chronograph/job/change_form.html:7
+msgid "Run Job"
+msgstr ""
+
+#: external_apps/chronograph/templates/admin/chronograph/job/change_form.html:10
+msgid "View on site"
+msgstr ""
+
+#: external_apps/chronograph/templates/admin/chronograph/job/change_list.html:11
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: external_apps/registration/admin.py:23
+msgid "Activate users"
+msgstr ""
+
+#: external_apps/registration/admin.py:43
+msgid "Re-send activation emails"
+msgstr ""
+
+#: external_apps/registration/forms.py:35
+msgid "Username"
+msgstr ""
+
+#: external_apps/registration/forms.py:36
+msgid "This value must contain only letters, numbers and underscores."
+msgstr ""
+
+#: external_apps/registration/forms.py:39
+msgid "Email address"
+msgstr ""
+
+#: external_apps/registration/forms.py:41
+#: templates/tvshow/episode_detail.html:40
+#: templates/tvshow/show_detail.html:65
+msgid "Password"
+msgstr ""
+
+#: external_apps/registration/forms.py:43
+msgid "Password (again)"
+msgstr ""
+
+#: external_apps/registration/forms.py:55
+msgid "A user with that username already exists."
+msgstr ""
+
+#: external_apps/registration/forms.py:67
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: external_apps/registration/forms.py:78
+msgid "I have read and agree to the Terms of Service"
+msgstr ""
+
+#: external_apps/registration/forms.py:79
+msgid "You must agree to the terms to register"
+msgstr ""
+
+#: external_apps/registration/forms.py:95
+msgid ""
+"This email address is already in use. Please supply a different email "
+"address."
+msgstr ""
+
+#: external_apps/registration/forms.py:122
+msgid ""
+"Registration using free email addresses is prohibited. Please supply a "
+"different email address."
+msgstr ""
+
+#: external_apps/registration/models.py:168
+msgid "user"
+msgstr ""
+
+#: external_apps/registration/models.py:169
+msgid "activation key"
+msgstr ""
+
+#: external_apps/registration/models.py:174
+msgid "registration profile"
+msgstr ""
+
+#: external_apps/registration/models.py:175
+msgid "registration profiles"
+msgstr ""
+
+#: templates/base.html:25
+msgid "Search Results"
+msgstr ""
+
+#: templates/base.html:51
+msgid "Log-out"
+msgstr ""
+
+#: templates/base.html:55 templates/registration/login.html:23
+msgid "Register"
+msgstr ""
+
+#: templates/base.html:56
+msgid "Log-in"
+msgstr ""
+
+#: templates/base.html:61
+#, python-format
+msgid ""
+"\n"
+"                          %(counter)s user online\n"
+"                        "
+msgid_plural ""
+"\n"
+"                          %(counter)s users online\n"
+"                        "
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/base.html:81
+msgid "All"
+msgstr ""
+
+#: templates/base.html:121
+msgid "Looking for a show?"
+msgstr ""
+
+#: templates/base.html:124 templates/search_results.html:19
+msgid "Search"
+msgstr ""
+
+#: templates/base.html:141
+msgid "Submit a show"
+msgstr ""
+
+#: templates/base.html:150
+msgid "Top users"
+msgstr ""
+
+#: templates/base.html:157
+msgid "episodes"
+msgstr ""
+
+#: templates/base.html:165
+msgid "Latest episodes"
+msgstr ""
+
+#: templates/base.html:172
+#, python-format
+msgid "Submited %(day)s "
+msgstr ""
+
+#: templates/base.html:190
+msgid "Source"
+msgstr ""
+
+#: templates/base.html:190
+msgid "Help"
+msgstr ""
+
+#: templates/base.html:190
+msgid "Contact"
+msgstr ""
+
+#: templates/contact.html:9
+msgid "Leave me a message!"
+msgstr ""
+
+#: templates/contact.html:13
+msgid "From:"
+msgstr ""
+
+#: templates/contact.html:18
+msgid "Subject:"
+msgstr ""
+
+#: templates/contact.html:23
+msgid "Send me a copy:"
+msgstr ""
+
+#: templates/contact.html:28
+msgid "Message:"
+msgstr ""
+
+#: templates/contact.html:31
+msgid "Send"
+msgstr ""
+
+#: templates/done.html:9
+msgid "Done!"
+msgstr ""
+
+#: templates/search_results.html:36
+msgid "Search results for"
+msgstr ""
+
+#: templates/search_results.html:36 templates/tvshow/shows_by.html:11
+msgid "matches"
+msgstr ""
+
+#: templates/search_results.html:41 templates/tvshow/shows_all.html:15
+#: templates/tvshow/shows_by.html:15
+msgid "Show"
+msgstr ""
+
+#: templates/search_results.html:42 templates/tvshow/shows_all.html:16
+#: templates/tvshow/shows_by.html:16
+msgid "Added"
+msgstr ""
+
+#: templates/search_results.html:43 templates/tvshow/shows_all.html:17
+#: templates/tvshow/shows_by.html:17
+msgid "Last season"
+msgstr ""
+
+#: templates/search_results.html:44 templates/tvshow/shows_all.html:18
+#: templates/tvshow/shows_by.html:18
+msgid "Language"
+msgstr ""
+
+#: templates/search_results.html:59
+msgid "No shows found"
+msgstr ""
+
+#: templates/sent.html:9
+msgid "Sent!"
+msgstr ""
+
+#: templates/comments/delete.html:8
+msgid "Really remove this comment?"
+msgstr ""
+
+#: templates/comments/delete.html:13
+msgid "Remove"
+msgstr ""
+
+#: templates/comments/deleted.html:8
+msgid ""
+"Thanks for taking the time to improve the quality of discussion on our site"
+msgstr ""
+
+#: templates/comments/posted.html:8
+msgid "Thank you for your comment"
+msgstr ""
+
+#: templates/comments/preview.html:16
+msgid "Please correct the error below"
+msgid_plural "Please correct the errors below"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/comments/preview.html:18
+msgid "Preview your comment"
+msgstr ""
+
+#: templates/comments/preview.html:20
+msgid "Edit?"
+msgstr ""
+
+#: templates/comments/preview.html:35
+msgid "Post"
+msgstr ""
+
+#: templates/comments/preview.html:36
+msgid "Preview"
+msgstr ""
+
+#: templates/profiles/create_profile.html:4
+msgid "Create Profile"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:4
+msgid "Edit Profile"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:20
+msgid "Homepage:"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:25
+msgid "Email:"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:30
+msgid "Your picture:"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:35
+msgid "Delete my account"
+msgstr ""
+
+#: templates/profiles/edit_profile.html:35
+msgid "Change password"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:5
+msgid "Profile for"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:20
+#: templates/tvshow/show_detail.html:26
+msgid "Edit »"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:26
+msgid "episode"
+msgstr ""
+
+#: templates/profiles/profile_detail.html:26
+msgid "sent since"
+msgstr ""
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:8 templates/registration/login.html:19
+#: templates/registration/password_reset_complete.html:9
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:10
+msgid "Account activation failed"
+msgstr ""
+
+#: templates/registration/login.html:11 templates/tvshow/addshow.html:11
+#: templates/tvshow/editshow.html:11
+msgid "Name:"
+msgstr ""
+
+#: templates/registration/login.html:16 templates/tvshow/addepisode.html:29
+#: templates/tvshow/editepisode.html:29
+msgid "Password:"
+msgstr ""
+
+#: templates/registration/login.html:22
+msgid "Forgot password"
+msgstr ""
+
+#: templates/registration/login.html:22
+msgid "Reset it"
+msgstr ""
+
+#: templates/registration/login.html:23
+msgid "Not member"
+msgstr ""
+
+#: templates/registration/logout.html:8
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:9
+msgid "Password changed"
+msgstr ""
+
+#: templates/registration/password_change_form.html:24
+#: templates/registration/password_reset_confirm.html:20
+#: templates/registration/password_reset_form.html:14
+#: templates/registration/registration_form.html:29
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:8
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:25
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:8
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:8
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#: templates/tvshow/addepisode.html:11 templates/tvshow/editepisode.html:11
+msgid "Season:"
+msgstr ""
+
+#: templates/tvshow/addepisode.html:19 templates/tvshow/addseason.html:11
+#: templates/tvshow/editepisode.html:19
+msgid "No:"
+msgstr ""
+
+#: templates/tvshow/addepisode.html:24 templates/tvshow/editepisode.html:24
+msgid "Title:"
+msgstr ""
+
+#: templates/tvshow/addepisode.html:34 templates/tvshow/editepisode.html:34
+msgid "Quality:"
+msgstr ""
+
+#: templates/tvshow/addepisode.html:39 templates/tvshow/editepisode.html:39
+msgid "Links:"
+msgstr ""
+
+#: templates/tvshow/addshow.html:16 templates/tvshow/editshow.html:16
+msgid "Language:"
+msgstr ""
+
+#: templates/tvshow/addshow.html:21 templates/tvshow/editshow.html:21
+msgid "Plot (optional):"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:11
+#: templates/tvshow/show_detail.html:89
+msgid "Submit an episode"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:38
+#: templates/tvshow/show_detail.html:63
+msgid "Quality"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:48
+#: templates/tvshow/show_detail.html:73
+msgid "Broken link"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:58
+msgid "comments"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:60
+msgid "No comments yet"
+msgstr ""
+
+#: templates/tvshow/episode_detail.html:82
+msgid "Say something"
+msgstr ""
+
+#: templates/tvshow/not_found.html:7
+msgid "No show was found, you may want submit one!"
+msgstr ""
+
+#: templates/tvshow/show_detail.html:34
+msgid "Season"
+msgstr ""
+
+#: templates/tvshow/show_detail.html:39
+msgid "Submited by"
+msgstr ""
+
+#: templates/tvshow/shows_all.html:11
+msgid "shows found"
+msgstr ""
+
+#: templates/tvshow/shows_by.html:11
+msgid "Shows beggining with"
+msgstr ""

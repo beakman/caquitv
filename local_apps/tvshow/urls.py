@@ -3,7 +3,6 @@ from django.views.generic import list_detail
 from django.contrib.auth.decorators import login_required
 from tvshow.models import Show, Season, Episode
 from tvshow.views import *
-from tvshow.forms import *
 
 show_info = {'queryset': Show.objects.all(),}
 

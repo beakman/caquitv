@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
 {% block header %}   
-<div id="header" style="margin:0 auto; width:700px; height:120px">
+<div id="header" style="margin:5px auto; width:700px; height:120px">
     <a href="{% url index %}">
-    <img alt="Caqui.tv" src="http://beakman.webfactional.com/media/img/logo-big.png"/>
+        <img alt="Caqui.tv" src="http://beakman.webfactional.com/media/img/logo-big.png"/>
+        <p id="betatag" class="big">BETA</p>
     </a>
 </div>
 {% endblock %}
-{% block content %}{% endblock %}                                
-{% block button %}{% endblock %}                
-
+           
+{% block button %}
+    <div class="button_wrap">
+    </div>
+{% endblock %}

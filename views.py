@@ -12,9 +12,20 @@ from forms import ContactForm
 
     
 def index(request):
+    top_users = UserProfile.objects.order_by('-episodes_submited')[0:5]
+    one_hour_ago = datetime.datetime.now() - datetime.timedelta(hours=1)
+    sql_datetime = datetime.datetime.strftime(one_hour_ago, '%Y-%m-%d %H:%M:%S')
+    # Show the number of users that has been login an hour ago.
+    online_users = User.objects.filter(last_login__gt=sql_datetime, is_active__exact=1).order_by('-last_login')
+    latest_episodes = Episode.objects.order_by('-pub_date')[0:5]
+    params = {
+        'latest':latest_episodes,
+        'top_users':top_users,
+        'online_users':online_users,
+    }
     if request.user.is_authenticated():
         return HttpResponseRedirect(reverse('user_home'))
-    return direct_to_template(request, template='index.html')
+    return direct_to_template(request, template='index.html', extra_context=params)
     
 def home(request):
     top_users = UserProfile.objects.order_by('-episodes_submited')[0:5]

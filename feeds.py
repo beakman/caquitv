@@ -30,7 +30,7 @@ class ShowFeed(Feed):
     def get_object(self, bits):
         if len(bits) != 1:
             raise ObjectDoesNotExist
-        return Show.objects.get(slug__startswith=bits[0])
+        return Show.objects.get(slug=bits[0])
     
     def title(self, obj):
         return "Feed for %s" %obj.name
