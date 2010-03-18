@@ -13,7 +13,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content= "text/html; charset=utf-8" />
-    <meta name="y_key" content="12691784e1588569">      
+    <meta name="y_key" content="12691784e1588569" />      
     <link href="http://beakman.webfactional.com/media/css/style.css" rel="stylesheet" type="text/css"/>
     <link rel="icon" 
       type="image/png" 
@@ -73,9 +73,9 @@
                 {% block header %}
                 <div id="header">                     
                     <a href="{% url index %}">
-                    <img alt="Caqui.tv" src="http://beakman.webfactional.com/media/img/logo.png"/>
-                    <p id="betatag" class="sma">BETA</p>
+                    <img alt="Caqui.tv" src="http://beakman.webfactional.com/media/img/logo.png"/>                    
                     </a>
+                    <p id="betatag" class="sma">BETA</p>
                 </div>
                 {% endblock %}
                 
@@ -115,7 +115,7 @@
                    
                 {% block search %}   
                 <div id="search" style="margin:0 auto; width:490px;">       
-                    <form name="search" id="home_search" class="search" method="GET" action="{% url search %}.">
+                    <form name="search" id="home_search" class="search" method="get" action="{% url search %}.">
                         <div style="margin: 0pt; padding: 0pt;">
                             <input type="hidden" value="" name="q"/>
                         </div>
@@ -147,43 +147,40 @@
                                           
                 {% block content %}    
                 {% if latest %}                            
-                <div id="content">
-                
-                <div id="right2columns">
-                <strong>{% trans "Top users" %}</strong><br>
-                <blockquote style="margin-top: 10px;">
-                {% for u in top_users %}
-                    <div style="margin-bottom: 2px;">
-                        <img src="http://beakman.webfactional.com/media/{{ u.avatar }}" width="32px" height="32px"/>
-                        <a href="{% url profiles_profile_detail u.user %}">{{ u.user }}</a>
-                        <p style="color:#b0b0b0; class=subtext">
-                        {{u.episodes_submited}} {% trans "episodes" %}</p>
+                <div id="content">               
+                    <div id="right2columns">
+                    <strong>{% trans "Top users" %}</strong><br />
+                    <blockquote style="margin-top: 10px;">
+                    {% for u in top_users %}
+                        <div style="margin-bottom: 2px;">
+                            <img src="http://beakman.webfactional.com/media/{{ u.avatar }}" width="32px" height="32px" alt="" />
+                            <a href="{% url profiles_profile_detail u.user %}">{{ u.user }}</a>
+                            <p style="color:#b0b0b0; class=subtext">
+                            {{u.episodes_submited}} {% trans "episodes" %}</p>
+                        </div>
+                    {% endfor %}
+                    </blockquote>
                     </div>
-                {% endfor %}
-                </blockquote>
+                    
+                    <div id="left2columns">
+                    <strong>
+                    <a class="rss_title" href="/feeds/latest">{% trans "Latest episodes" %}</a> 
+                    </strong>
+                    <blockquote style="margin-top: 10px;">
+                    {% for episode in latest %}
+                        <div style="display:inline; margin-bottom: 2px;">
+                            <a href="{% url show_detail episode.show.slug %}">{{ episode.show }}</a> <a class="ellipsis" href="{% url episode_detail episode.show.slug, episode.season.no, episode.slug %}">{{ episode }}</a>
+                            <p style="color:#b0b0b0;" class="subtext">
+                            {% blocktrans with episode.pub_date|timesince as day %}Submited {{day}} {% endblocktrans %}
+                            </p>
+                        </div>
+                    {% endfor %}
+                    </blockquote>
+                    </div>                                                      
+                    <div class="clear"></div>
                 </div>
-                
-                <div id="left2columns">
-                <strong>
-                <a class="rss_title" href="/feeds/latest">{% trans "Latest episodes" %}</a> 
-                </strong>
-                <blockquote style="margin-top: 10px;">
-                {% for episode in latest %}
-                    <div style="display:inline; margin-bottom: 2px;">
-                        <a href="{% url show_detail episode.show.slug %}">{{ episode.show }}</a> <a class="ellipsis" href="{% url episode_detail episode.show.slug, episode.season.no, episode.slug %}">{{ episode }}</a>
-                        <p style="color:#b0b0b0;" class="subtext">
-                        {% blocktrans with episode.pub_date|timesince as day %}Submited {{day}} {% endblocktrans %}
-                        </p>
-                    </div>
-                {% endfor %}
-                </blockquote>
-                </div>
-                                                      
-                <div class="clear"></div>       
-                {% endif %}
-                </div>
-                {% endblock %}
-                
+                {% endif %}                
+                {% endblock %}               
             </div>    
 	    </div>
     </div>
