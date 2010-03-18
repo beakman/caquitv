@@ -7,31 +7,59 @@
 {% block message %}{% endblock %}
 
 {% block content %}
-<div id="content">
+<div id="content" class="help">
+<h1>Caqui-TV</h1>
+<p>Caqui-TV it's an open source TV Show syndication system. Caqui-TV provides a feed with direct download links to your favourite TV Shows.</p>
 
-        <div id="right2columns">
-        <h2>Browse</h2>
-        <blockquote style="margin-top: 10px;">
-            <div style="margin-bottom: 2px;">
-                <ul style="padding-left:10px; list-style-type:square;" class="help">
-                <li><a href="">FAQ</a></li>
-                <li><a href="">{% trans "Quick guide" %}</a></li>
-                </ul>
-            </div>
-        </blockquote>
-        </div>
-    
-        <div id="left2columns">
-        <h2>Caqui.tv FAQ</h2>
-        <blockquote style="margin-top: 10px;">
-            <div style="margin-bottom: 2px;">
-                <ul class="help">
-                <li><strong>What is Caqui.tv?</strong></li>
-                <li style="list-style-type:none; padding-left:10px; font-size:12px; color:#333;" class="answer">{% trans "Caqui.tv it's a TV Show syndication system. Caqui-tv provides a feed with direct download links to your favourite TV Shows." %}</li>                
-                </ul>
-            </div>
-        </blockquote>
-        </div>
+<h2>Usage</h2>
+
+<p>For downloaders:</p>
+<ol>
+    <li>Search a show.</li>
+    <li>Pick up the rss feed.</li>
+    <li>Download it and enjoy!</li>    
+</ol>
+
+<p>For uploaders:</p>
+<ol>
+    <li>
+        <dt>
+        Start a new show by clicking on 'Submit a show' and filling the following fields:
+        </dt>
+        <dd>
+            <ul>
+                <li>Name: it's the name of the show (i.e: X-Files)</li>
+                <li>Language: the language of the audio (i.e: Spanish, if the TV show it's dubbed into spanish)</li>
+                <li>Plot (optional): the synopsis of the TV show.</li>
+            </ul>
+        </dd>
+    </li>
+    <li>        
+        <dt>
+        Add new episodes for an existing show by clicking on 'Submit an episode':
+        </dt>
+        <dd>
+            <ul>
+                <li>Season: number of the season which episode belongs to. If it doesn't appears in the choice field, add it by clicking on the '+' symbol.</li>
+                <li>No: the number of the episode.</li>
+                <li>Title: title of the episode (i.e: The Jersey Devil)</li>
+                <li>Password: if the episode comes packed with a password you can provide it in this field.</li>
+                <li>Quality: refers to how the episode was encoded (i.e: HDTV|720p)</li>
+                <li>Links: to the episode.</li>                
+            </ul>
+        </dd>
+    </li>
+    <li>        
+        <dt>Submit it!</dt>
+    </li>
+</ol>
+
+<h2>Screencasts</h2>
+<p><strong>Submitting an episode</strong></p>
+<center>
+<embed src="http://blip.tv/play/hKoKgc6udAA" type="application/x-shockwave-flash" width="690" height="480" allowscriptaccess="always" allowfullscreen="true">
+</embed>
+</center>
 </div>
 {% endblock %}
 

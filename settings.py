@@ -47,13 +47,8 @@ USE_I18N = True
 I18N_URLS = False
 
 #MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-<<<<<<< HEAD:settings.py
-MEDIA_ROOT = '//home/paco/Dropbox/Programas/caquitv/static/'
+MEDIA_ROOT = '/home/paco/Dropbox/Programas/caquitv/static/'
 MEDIA_URL = 'http://localhost/media/'
-=======
-MEDIA_ROOT = '/home/some/path/media/'
-MEDIA_URL = 'http://change.it/media/'
->>>>>>> 8f899d6eba48ff596d084a32999c347236ece3bd:settings.py
 
 LOGIN_REDIRECT_URL = '/'
 
