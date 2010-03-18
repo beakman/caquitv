@@ -26,10 +26,10 @@ For uploaders:
     * No: the number of the episode.
     * Title: title of the episode (i.e: The Jersey Devil)
     * Password: if the episode comes packed with a password you can provide it in this field.
-    * Quality: refers to how the episode was encoded.
+    * Quality: refers to how the episode was encoded (i.e: HDTV|720p)
     * Links: to the episode.
 
-#. Submit!
+#. Submit it!
 
 TODO
 ====
@@ -40,4 +40,5 @@ TODO
 
 BUGs
 ====
+- Two files for one avatar image.
 
