@@ -139,7 +139,7 @@
                              
                 {% block button %}
                 <div class="button_wrap">
-                    <a class="button" href="{% url addshow %}">{% trans "Submit a show" %}</a>
+                    <a class="button roundedcorners" href="{% url addshow %}">{% trans "Submit a show" %}</a>
                 </div>
                 {% endblock %}
                                           
@@ -150,8 +150,8 @@
                     <strong>{% trans "Top users" %}</strong><br />
                     <blockquote style="margin-top: 10px;">
                     {% for u in top_users %}
-                        <div style="margin-bottom: 2px;">
-                            <img src="http://beakman.webfactional.com/media/{{ u.avatar }}" width="32px" height="32px" alt="" />
+                        <div style="margin-bottom: 0.6em;">
+                            <img class="roundedcorners" src="http://caqui.tv/media/{{ u.avatar }}" width="32px" height="32px" alt="" />
                             <a href="{% url profiles_profile_detail u.user %}">{{ u.user }}</a>
                             <p style="color:#b0b0b0; class=subtext">
                             {{u.episodes_submited}} {% trans "episodes" %}</p>

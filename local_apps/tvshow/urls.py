@@ -14,7 +14,7 @@ urlpatterns = patterns('caquitv.local_apps.tvshow.views',
     url(r'^(?P<show>[-\w]+)/(?P<season>\d+)/(?P<slug>[-\w]+)/$', episode_detail, name="episode_detail"),
     
     # Edit show info
-    url(r'^edit/(?P<slug>[-\w]+)/$', edit_show, name="edit_show"),
+    url(r'^edit/(?P<slug>[-\w]+)/$', login_required(edit_show), name="edit_show"),
     
     # Vote broken link
     url(r'^(?P<show>[-\w]+)/(?P<season>\d+)/(?P<episode>[-\w]+)/broken/$', broken_link, name='broken_link'),

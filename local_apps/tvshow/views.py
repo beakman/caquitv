@@ -43,7 +43,8 @@ def episode_detail(request, show, season, slug):
         'episode': episode,
         'user': request.user,
     })
-        
+    
+@login_required        
 def edit_show(request, slug):
     show = Show.objects.get(slug=slug)
     if request.method == 'POST':
@@ -64,7 +65,7 @@ def edit_show(request, slug):
 def broken_link(request, show, season, episode):
     ep = Episode.objects.get(show__slug=show, season__no=season, slug=episode)
     if not ep.rating.get_rating_for_user(request.user, request.META['REMOTE_ADDR']):    
-        if ep.rating.score==5 & ep-rating.get_rating_for_user(user=User.objects.get(username=beakman)):
+        if ep.rating.score==5 & ep.rating.get_rating_for_user(user=User.objects.get(username=beakman)):
             ep.delete()
         else:
             ep.rating.add(score=1, user=request.user, ip_address=request.META['REMOTE_ADDR'])
