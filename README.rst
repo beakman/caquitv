@@ -44,4 +44,4 @@ BUGs
 
 SCREENCAST
 ============
-*http://blip.tv/file/3361644
+- http://blip.tv/file/3361644
