@@ -42,3 +42,6 @@ BUGs
 ====
 - Two files for one avatar image.
 
+SCREENCAST
+============
+http://blip.tv/file/3361644
